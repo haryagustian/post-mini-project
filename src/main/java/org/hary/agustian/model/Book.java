@@ -11,7 +11,7 @@ public class Book implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;git
+    private Integer id;
     private String title;
     private Integer year;
 
