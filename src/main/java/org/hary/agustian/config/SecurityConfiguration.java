@@ -1,5 +1,6 @@
 package org.hary.agustian.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.hary.agustian.enums.Permission;
 import org.hary.agustian.enums.Role;
 import org.hary.agustian.service.LogoutService;
@@ -20,6 +21,7 @@ import org.springframework.security.web.authentication.logout.LogoutHandler;
 import static org.springframework.http.HttpMethod.*;
 import static org.springframework.http.HttpMethod.DELETE;
 
+@Slf4j
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -39,6 +41,7 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        log.info("CALL::BEAN::SecurityFilterChain");
         httpSecurity
                 .csrf(
                         AbstractHttpConfigurer::disable

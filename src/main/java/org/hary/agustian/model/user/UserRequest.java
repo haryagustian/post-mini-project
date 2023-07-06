@@ -22,6 +22,19 @@ public class UserRequest {
     public UserRequest() {
     }
 
+    public UserRequest(String fullname, String username, String email, String password, Sex sex, String telephone, String address, Role role) {
+        this.fullname = fullname;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.sex = sex;
+        this.telephone = telephone;
+        this.address = address;
+        this.role = role;
+//        this.tokens = tokens;
+//        this.borrower = borrower;
+    }
+
     public UserRequest(String fullname, String username, String email, String password, Sex sex, String telephone, String address, Role role, List<Token> tokens, Borrower borrower) {
         this.fullname = fullname;
         this.username = username;

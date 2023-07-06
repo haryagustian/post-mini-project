@@ -39,10 +39,21 @@ public class User extends TimeBase implements UserDetails, Serializable {
     @OneToMany(mappedBy = "user", targetEntity = Token.class)
     private List<Token> tokens;
 
-    @OneToOne(mappedBy = "user", targetEntity = User.class)
+    @OneToOne(mappedBy = "user", targetEntity = Borrower.class)
     private Borrower borrower;
 
     public User() {
+    }
+
+    public User(String fullname, String username, String email, String password, Sex sex, String telephone, String address, Role role) {
+        this.fullname = fullname;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.sex = sex;
+        this.telephone = telephone;
+        this.address = address;
+        this.role = role;
     }
 
     public User(String fullname, String username, String email, String password, Sex sex, String telephone, String address, Role role, List<Token> tokens, Borrower borrower) {
@@ -66,11 +77,11 @@ public class User extends TimeBase implements UserDetails, Serializable {
         this.id = id;
     }
 
-    public String getFullname() {
+    public String getFullName() {
         return fullname;
     }
 
-    public void setFullname(String fullname) {
+    public void getFullName(String fullname) {
         this.fullname = fullname;
     }
 

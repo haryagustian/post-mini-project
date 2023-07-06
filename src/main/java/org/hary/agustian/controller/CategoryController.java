@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@RestController
-@RequestMapping("/api/v1/categories")
-@CrossOrigin({"http://localhost:8080", "http://localhost:3000"})
+//@RestController
+//@RequestMapping("/api/v1/categories")
+//@CrossOrigin({"http://localhost:8080", "http://localhost:3000"})
 public class CategoryController {
 
 //    private static final Logger LOGGER = LoggerFactory.getLogger(CategoryController.class.getSimpleName());

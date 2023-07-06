@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@RestController
-@RequestMapping("/api/v1/books")
-@CrossOrigin({"http://localhost:8080", "http://localhost:3000"})
+//@RestController
+//@RequestMapping("/api/v1/books")
+//@CrossOrigin({"http://localhost:8080", "http://localhost:3000"})
 public class BookController {
 
 //    private static final Logger LOGGER = LoggerFactory.getLogger(BookController.class.getSimpleName());
